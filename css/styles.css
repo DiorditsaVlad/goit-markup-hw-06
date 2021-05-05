@@ -537,6 +537,7 @@ body {
   width: 358px;
   height: 50px;
   transition: color 250ms var(--cubik);
+  padding-left: 15px;
 }
 .form-email{
   display: inline-block;
@@ -545,7 +546,7 @@ body {
   font-size: 16px;
   line-height: 1.25;
   color: rgba(255, 255, 255, 0.6);
-  padding-left: 15px;
+  
 }
 .input-email:focus{
   color: var(--pr-wht-color);
@@ -603,6 +604,7 @@ body {
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
   margin-bottom: 10px;
+  padding-left: 42px;
 }
 .icon-label{
   position: absolute;
@@ -622,14 +624,15 @@ body {
   height: 120px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
+   padding-top: 12px;
+   padding-left: 16px;
 }
 .group-comment::placeholder{
   font-size: 12px;
   line-height: 1.16;
   letter-spacing: 0.01em;
   color: rgba(117, 117, 117, 0.5);
-  padding-top: 12px;
-  padding-left: 16px;
+ 
 }
 .form{
   width: 448px;
