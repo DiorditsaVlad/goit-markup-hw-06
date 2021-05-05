@@ -699,7 +699,8 @@ transition: background-color 250ms var(--cubik), border-color 250ms var(--cubik)
   display: inline-block;
   width: 15px;
   height: 15px;
-
+transition: background-color 250ms var(--cubik),
+border-color 250ms var(--cubik);
   border-radius: 4px;
   border: 2px solid var(--pr-title-color);
 
