@@ -196,6 +196,8 @@ body {
   background-color: var(--accent-color);
   color: var(--pr-wht-color);
   padding: 10px 32px;
+  min-width: 200px;
+  max-height: 50px;
 }
 .visually-hidden {
   position: absolute !important;
@@ -534,6 +536,7 @@ body {
   background: var(--secondary-bg-cl);
   width: 358px;
   height: 50px;
+  transition: color 250ms var(--cubik);
 }
 .form-email{
   display: inline-block;
@@ -544,10 +547,13 @@ body {
   color: rgba(255, 255, 255, 0.6);
   padding-left: 15px;
 }
+.input-email:focus{
+  color: var(--pr-wht-color);
+
+}
 .icon-input{
   fill: var(--pr-wht-color);
   margin-left: 10px;
-
 }
 .backdrop {
   position: fixed;
@@ -580,11 +586,56 @@ body {
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
 }
-.ccc{
-  display: block;
-  
+.title-input{
+ margin-top: 40px;
+ margin-bottom: 30px;
+ font-weight: 700;
+ font-size: 20px;
+ line-height: 1.15;
+ text-align: center;
+ color: var(--pr-title-color);
 }
-
+.group{
+  
+  display: block;
+  width: 100%;
+  height: 40px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+.icon-label{
+  position: absolute;
+  top: 25px;
+  left: 12px;
+}
+.label-form{
+  position: relative;
+  font-size: 12px;
+  line-height: 1.16;
+  letter-spacing: 0.01em;
+  color: var(--pr-text-color);
+  margin-bottom: 4px;
+}
+.group-comment{
+  width: 448px;
+  height: 120px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+}
+.group-comment::placeholder{
+  font-size: 12px;
+  line-height: 1.16;
+  letter-spacing: 0.01em;
+  color: rgba(117, 117, 117, 0.5);
+  padding-top: 12px;
+  padding-left: 16px;
+}
+.form{
+  width: 448px;
+  margin-left: auto;
+  margin-right: auto;
+}
 .close {
   position: absolute;
   right: 8px;
@@ -595,6 +646,20 @@ body {
   border-radius: 50%;
   background-color: var(--pr-wht-color);
   cursor: pointer;
+}
+.condition{
+  font-size: 14px;
+  line-height: 1.71;
+  color:var(--pr-text-color);
+}
+.condition-link{
+  color: var(--accent-color);
+}
+.btn-input{
+  display: block;
+  margin-top: 30px;
+  margin-left: auto;
+  margin-right: auto;
 }
 .close:before,
 .close:after {
