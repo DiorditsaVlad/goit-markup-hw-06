@@ -39,37 +39,65 @@ body {
   padding-top: 94px;
   padding-bottom: 94px;
 }
-.link {
+.product-link {
   text-decoration: none;
   color: inherit;
   transition: color 250ms var(--cubik);
 }
+.product-link:hover,
+.product-link:focus {
+  color: var(--accent-color);
+}
+/* header */
 .header {
   border-bottom: 1px solid #ececec;
 }
-.flex-header {
+.header-container {
   display: flex;
 }
-.header-main {
+.header-container--left {
+  margin-left: auto;
+}
+.header-nav {
   display: flex;
   align-items: center;
-}
-.header-main-list {
-  display: flex;
-  margin-left: auto;
 }
 .site-nav {
   display: flex;
 }
-.site-nav .item {
+.site-nav__item {
   margin-right: 50px;
 }
-.aut-list {
+.site-nav__link {
+  position: relative;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+
+  display: block;
+  padding-top: 31px;
+  padding-bottom: 31px;
+}
+.site-nav__link--after::after {
+  position: absolute;
+  content: '';
+  background: #2196f3;
+  border-radius: 2px;
+  width: 100%;
+  height: 4px;
+  bottom: 0;
+  left: 0;
+}
+.site-nav__link--active {
+  color: var(--accent-color);
+}
+.aut-nav {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
 }
-.aut-nav {
+.aut-nav__link{
   display: flex;
   align-items: center;
   font-weight: 500;
@@ -81,23 +109,17 @@ body {
   padding-bottom: 31px;
   transition: color 250ms var(--cubik);
 }
-.aut-nav:hover,
-.aut-nav:focus {
+.aut-nav__link:hover,
+.aut-nav__link:focus {
   fill: var(--accent-color);
 }
-.smartphone {
+.aut-nav__icon {
   margin-right: 10px;
 }
-.envelope {
-  margin-right: 10px;
-}
-.aut-list .item:not(:last-child) {
+.aut-nav__item:not(:last-child) {
   margin-right: 50px;
 }
-.link:hover,
-.link:focus {
-  color: var(--accent-color);
-}
+
 .logo {
   font-family: Raleway, sans-serif;
   font-size: 26px;
@@ -106,35 +128,9 @@ body {
   color: inherit;
   display: inline-block;
   margin-right: 93px;
-}
-.logo-web {
-  color: var(--accent-color);
-}
-.logo {
   color: #000000;
 }
-.pr-nav {
-  position: relative;
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 1.14;
-  letter-spacing: 0.02em;
-
-  display: block;
-  padding-top: 31px;
-  padding-bottom: 31px;
-}
-.active::after {
-  position: absolute;
-  content: '';
-  background: #2196f3;
-  border-radius: 2px;
-  width: 100%;
-  height: 4px;
-  bottom: 0;
-  left: 0;
-}
-.studio {
+.logo__name--after {
   color: var(--accent-color);
 }
 /* main */
