@@ -89,9 +89,6 @@ body {
   bottom: 0;
   left: 0;
 }
-.site-nav__link--active {
-  color: var(--accent-color);
-}
 .aut-nav {
   display: flex;
   flex-wrap: wrap;
@@ -119,7 +116,6 @@ body {
 .aut-nav__item:not(:last-child) {
   margin-right: 50px;
 }
-
 .logo {
   font-family: Raleway, sans-serif;
   font-size: 26px;
@@ -130,7 +126,7 @@ body {
   margin-right: 93px;
   color: #000000;
 }
-.logo__name--after {
+.logo__name{
   color: var(--accent-color);
 }
 /* main */
@@ -168,8 +164,8 @@ body {
   margin-bottom: 30px;
   padding-top: 200px;
 }
-.btn:hover,
-.btn:focus {
+.product-button:hover,
+.product-button:focus {
   color: var(--pr-wht-color);
   background-color: var(--accent-color);
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
@@ -180,20 +176,18 @@ body {
   font-size: 16px;
   cursor: pointer;
   border: 0;
-
-  transition: color 250ms var(--cubik), background-color 250ms var(--cubik),
-    box-shadow 250ms var(--cubik);
-}
-.section-hero__button {
   font-weight: 700;
   line-height: 1.87;
   text-align: center;
   letter-spacing: 0.06em;
   background-color: var(--accent-color);
   color: var(--pr-wht-color);
-  padding: 10px 32px;
+  padding: 10px 30px;
   min-width: 200px;
   max-height: 50px;
+
+  transition: color 250ms var(--cubik), background-color 250ms var(--cubik),
+    box-shadow 250ms var(--cubik);
 }
 /* section-hidden */
 .visually-hidden {
@@ -380,46 +374,7 @@ body {
   fill: var(--pr-wht-color);
 }
 /* section-client */
-.constant-client {
-  display: flex;
-  flex-wrap: wrap;
-  flex-basis: calc((100% - 30px * 6) / 6);
-  align-items: center;
-}
-.item-client:not(:last-child) {
-  margin-right: 30px;
-}
-.link-client {
-  display: block;
-  width: 170px;
-  padding: 20px 63px;
-  border: 1px solid var(--icon-cl-pr);
-  border-radius: 4px;
-  fill: var(--icon-cl-pr);
-  transition: fill 250ms var(--cubik), border 250ms var(--cubik);
-}
-.link-client-foster {
-  display: block;
-  width: 170px;
-  padding: 20px 45px;
-  border: 1px solid var(--icon-cl-pr);
-  border-radius: 4px;
-  fill: var(--icon-cl-pr);
-  transition: fill 250ms var(--cubik), border 250ms var(--cubik);
-}
-
-.link-client:hover,
-.link-client:focus {
-  fill: var(--accent-color);
-  border: 1px solid var(--accent-color);
-}
-.link-client-foster:hover,
-.link-client-foster:focus {
-  fill: var(--accent-color);
-  border: 1px solid var(--accent-color);
-}
-
-.pr-client {
+.section-clients__title {
   font-weight: 700px;
   font-size: 36px;
   line-height: 42px;
@@ -428,48 +383,71 @@ body {
   margin-top: 0;
   margin-bottom: 50px;
 }
+.constant-clients {
+  display: flex;
+  flex-wrap: wrap;
+  flex-basis: calc((100% - 30px * 6) / 6);
+  align-items: center;
+}
+.constant-clients__item:not(:last-child) {
+  margin-right: 30px;
+}
+.constant-clients__link {
+  display: block;
+  width: 170px;
+  padding: 20px 63px;
+  border: 1px solid var(--icon-cl-pr);
+  border-radius: 4px;
+  fill: var(--icon-cl-pr);
+  transition: fill 250ms var(--cubik), border 250ms var(--cubik);
+}
+.constant-clients__link--padding {
+  padding: 20px 45px;
+}
+.constant-clients__link:hover,
+.constant-clients__link:focus {
+  fill: var(--accent-color);
+  border: 1px solid var(--accent-color);
+}
 /* подвал */
+/* address */
 .footer {
   background-color: var(--secondary-bg-cl);
   padding-top: 60px;
 }
-.address {
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+.logo__name--color {
+  color: var(--pr-wht-color);
+}
+.footer__address {
   font-style: inherit;
   font-size: 14px;
   line-height: 1.71;
   color: var(--pr-wht-color);
 }
-.address p {
+.footer__address p {
   margin: 0;
   padding-top: 20px;
   padding-bottom: 10px;
 }
-.logo-footer {
-  font-family: Raleway, sans-serif;
-  font-size: 26px;
-  line-height: 1.19;
-  color: var(--pr-wht-color);
-  text-decoration: none;
-  display: flex;
+.footer-list {
+  padding-bottom: 60px;
 }
-.aut-nav-footer {
+.footer-list__nav {
   color: var(--pr-text-color);
   margin: 0;
   padding-bottom: 10px;
   display: inline-block;
   padding-left: 0;
 }
-.footer-list {
-  padding-bottom: 60px;
+/* footer-join */
+.footer-join {
+  margin-left: 60px;
 }
-.footer-flex {
-  display: flex;
-  flex-wrap: wrap;
-}
-.join {
-  margin-left: 70px;
-}
-.join-title {
+.footer-join__title {
   font-weight: 700px;
   font-size: 14px;
   line-height: 16px;
@@ -479,15 +457,15 @@ body {
   margin-bottom: 20px;
   padding-top: 12px;
 }
-.footer-flex-icon {
+.footer-icon {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
 }
-.footer-flex .item-icon:not(:last-child) {
+.footer-icon__item:not(:last-child) {
   margin-right: 10px;
 }
-.link-footer-icon {
+.footer-icon__link {
   display: flex;
   align-items: center;
   width: 44px;
@@ -497,14 +475,15 @@ body {
   background: rgba(255, 255, 255, 0.1);
   transition: background-color 250ms var(--cubik);
 }
-.link-footer-icon:hover,
-.link-footer-icon:focus {
+.footer-icon__link:hover,
+.footer-icon__link:focus {
   background-color: var(--accent-color);
 }
-.input-footer{
-  margin-left: 95px;
+/* footer-input */
+.footer-input{
+  margin-left: 90px;
 }
-.text-input{
+.footer-input__text{
   display: block;
   padding-top: 12px;
   font-weight: 700;
@@ -514,23 +493,10 @@ body {
   color: var(--pr-wht-color);
   margin-bottom: 20px ;
 }
-.btn-footer{
-  display: inline-flex;
-  align-items: center;
-  padding: 10px 30px;
-  background-color: var(--accent-color);
-  color: var(--pr-wht-color);
-  min-height: 50px;
-  max-width: 200px;
-  margin-left: 12px;
-
-  font-weight: 700; 
-  font-size: 16px;
-   line-height: 1.87;
-   letter-spacing: 0.06em;
+.form-footer {
+  display: inline-block;
 }
-
-.input-email{
+.form-footer__mail {
   border: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: 4px;
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
@@ -540,24 +506,24 @@ body {
   transition: color 250ms var(--cubik);
   padding-left: 15px;
 }
-.form-email{
-  display: inline-block;
+.form-footer__button {
+  display: inline-flex;
+  align-items: center;
+  margin-left: 12px;
 }
-.input-email::placeholder{
+.form-footer__mail::placeholder {
   font-size: 16px;
   line-height: 1.25;
   color: rgba(255, 255, 255, 0.6);
-  
 }
-.input-email:focus{
+.form-footer__mail:focus {
   color: var(--pr-wht-color);
-
 }
-
-.icon-input{
+.form-footer-icon {
   fill: var(--pr-wht-color);
   margin-left: 10px;
 }
+/* backdrop */
 .backdrop {
   position: fixed;
   top: 0;
@@ -641,7 +607,7 @@ body {
   fill: var(--accent-color);
 }
 .form{
-  width: 448px;
+  width: 428px;
   margin-left: auto;
   margin-right: auto;
 }
